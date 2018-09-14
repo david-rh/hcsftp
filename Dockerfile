@@ -16,7 +16,8 @@ RUN chgrp ssh_keys /etc/ssh/ssh_host_rsa_key
 RUN ls -l /etc/ssh/ssh_host*
 
 RUN chmod 755 /start.sh 
-EXPOSE 22 
 RUN ./start.sh 
 
-ENTRYPOINT ["/usr/sbin/sshd", "-Dde"]
+EXPOSE 2022 
+
+ENTRYPOINT ["/usr/sbin/sshd", "-Dde", "-p 2022"]
