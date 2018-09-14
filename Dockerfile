@@ -11,7 +11,7 @@ ADD ./start.sh /start.sh
 RUN mkdir /var/run/sshd 
 
 RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N '' 
-RUN chmod 640 /etc/ssh/ssh_host_rsa_key
+RUN chmod 644 /etc/ssh/ssh_host_rsa_key
 RUN chgrp ssh_keys /etc/ssh/ssh_host_rsa_key
 RUN ls -l /etc/ssh/ssh_host*
 
