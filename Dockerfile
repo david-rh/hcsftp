@@ -1,5 +1,5 @@
 # Hc-erp-host for sftp 
-FROM rhel:rhel7 
+FROM rhel7 
 MAINTAINER Cheriyan Thomas <cthomas@hc.hctx.net> 
 
 RUN yum -y update; yum clean all 
@@ -11,7 +11,7 @@ ADD ./start.sh /start.sh
 RUN mkdir /var/run/sshd 
 
 RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N '' 
-RUN ls /etc/ssh/ssh_host*
+RUN ls -l /etc/ssh/ssh_host*
 
 RUN chmod 755 /start.sh 
 EXPOSE 22 
