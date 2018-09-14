@@ -19,4 +19,4 @@ RUN chmod 755 /start.sh
 EXPOSE 22 
 RUN ./start.sh 
 
-ENTRYPOINT ["/usr/sbin/sshd", "-D"]
+ENTRYPOINT ["/usr/sbin/sshd", "-Dde"]
