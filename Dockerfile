@@ -20,4 +20,4 @@ RUN ./start.sh
 
 EXPOSE 22 
 
-ENTRYPOINT ["/usr/sbin/sshd", "-de"]
+ENTRYPOINT ["/usr/sbin/sshd", "-Dde"]
